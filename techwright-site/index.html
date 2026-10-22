@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Techwright – Learn IT, Cloud, DevOps and Cybersecurity from zero</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+:root{--bg:#f5f7fb;--surface:#fff;--ink:#0f1b2d;--muted:#56637a;--line:#dde4ef;--accent:#2f6bff;--accent-ink:#fff;--warm:#ffb020;--ok:#1d7a4d;--err:#b3261e;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1220;--surface:#141e30;--ink:#e8edf6;--muted:#9aa8bf;--line:#26344d;--accent:#6c93ff;--accent-ink:#0b1220;--ok:#5fd09a;--err:#ff8a80}}
+:root[data-theme="dark"]{--bg:#0b1220;--surface:#141e30;--ink:#e8edf6;--muted:#9aa8bf;--line:#26344d;--accent:#6c93ff;--accent-ink:#0b1220;--ok:#5fd09a;--err:#ff8a80}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Source Sans 3",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.12;margin:0;letter-spacing:-.02em}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:#0b1220;border-bottom:1px solid #1d2a42;color:#fff}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font:800 23px "Bricolage Grotesque",sans-serif;text-decoration:none;letter-spacing:-.03em}
+.logo i{font-style:normal;color:#6c93ff}
+nav{display:flex;align-items:center;gap:28px}
+nav a{text-decoration:none;color:#b8c4da;font-weight:600;font-size:15px}
+nav a:hover{color:#fff}
+nav a.nb{background:#2f6bff;color:#fff;padding:9px 18px;border-radius:8px}
+.hero{background:radial-gradient(900px 420px at 85% -10%,rgba(47,107,255,.35),transparent 60%),#0b1220;color:#fff;padding:88px 0 0}
+.hero h1{font-size:clamp(40px,6.4vw,68px);font-weight:800;max-width:17ch}
+.hero p{font-size:20px;color:#b8c4da;max-width:56ch;margin:22px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:16px;margin-top:36px}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--accent);color:var(--accent-ink);font:700 16px "Source Sans 3",sans-serif;border:0;border-radius:10px;padding:15px 28px;min-width:200px;cursor:pointer;text-decoration:none}
+.btn:hover{filter:brightness(1.1)}
+.btn.ghost{background:transparent;color:#fff;border:1.5px solid #3a4a68}
+.btn.ghost:hover{border-color:#fff;filter:none}
+:focus-visible{outline:3px solid var(--warm);outline-offset:2px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:64px;border-top:1px solid #1d2a42}
+.stats div{padding:26px 20px 26px 0}
+.stats b{display:block;font:700 26px "Bricolage Grotesque",sans-serif;color:#fff}
+.stats span{color:#9aa8bf;font-size:15px}
+section{padding:72px 0}
+h2{font-size:clamp(28px,4vw,40px);font-weight:700}
+.sub{color:var(--muted);margin:12px 0 32px;max-width:62ch}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.course{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:8px;padding:22px;border:1.5px solid var(--line);border-radius:14px;background:var(--surface)}
+.course:hover{border-color:var(--accent);transform:translateY(-2px)}
+.course[aria-selected="true"]{border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,107,255,.22)}
+.course:focus-visible{outline:3px solid var(--warm);outline-offset:2px}
+.ic{width:44px;height:44px;border-radius:10px;background:#0f1b2d;color:#fff;display:grid;place-items:center;font:700 16px "Bricolage Grotesque",monospace}
+.course b{font:700 20px "Bricolage Grotesque",sans-serif}
+.course small{color:var(--muted);font-size:15px;line-height:1.45}
+.chip{margin-top:auto;padding-top:6px;font-weight:600;font-size:14px;color:var(--accent)}
+.panel{margin-top:28px;background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:32px;scroll-margin-top:84px}
+.panel h3{font-size:30px;font-weight:700}
+.meta{color:var(--muted);font-weight:600;font-size:15px;margin:8px 0 6px}
+.panel h4{margin:22px 0 10px;font:700 17px "Source Sans 3",sans-serif}
+.mods{list-style:none;margin:0 0 0 70px;padding:0;counter-reset:m;border-left:2px solid var(--line)}
+.mods li{counter-increment:m;padding:9px 0 9px 22px;position:relative}
+.mods li::before{content:"Week " counter(m);position:absolute;left:-2px;top:9px;transform:translateX(-100%);padding-right:14px;font-size:13px;color:var(--muted);font-weight:600;white-space:nowrap}
+.mods li b{display:block}
+.mods li span{color:var(--muted);font-size:16px}
+.outcome{margin-top:22px;padding:16px 18px;background:var(--bg);border-radius:10px;border-left:4px solid var(--warm)}
+.why{background:var(--surface);border-block:1px solid var(--line)}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.feat h3{font-size:21px;margin-bottom:8px}
+.feat p{margin:0;color:var(--muted)}
+.reg{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.form{background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:28px}
+label{display:block;font-weight:600;margin:16px 0 6px;font-size:15px}
+label:first-child{margin-top:0}
+input,select{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:8px;padding:12px}
+.note{color:var(--muted);font-size:14px;margin:14px 0 0}
+.msg{margin-top:14px;font-weight:600}
+.msg.ok{color:var(--ok)}.msg.err{color:var(--err)}
+.checks{list-style:none;padding:0;margin:22px 0 0}
+.checks li{padding:6px 0 6px 28px;position:relative}
+.checks li::before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:700}
+footer{background:#0b1220;color:#9aa8bf;padding:32px 0;font-size:15px}
+@media (max-width:860px){.grid,.feat,.reg{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}nav a:not(.nb){display:none}.mods{margin-left:0;border-left:0}.mods li{padding-left:0}.mods li::before{position:static;transform:none;display:block;padding:0}.btn{width:100%}.hero{padding-top:56px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.course:hover{transform:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="#top">Tech<i>wright</i></a><nav><a href="#courses">Courses</a><a href="#why">Why Techwright</a><a class="nb" href="#register">Register interest</a></nav></div></header>
+<main id="top">
+<div class="hero"><div class="wrap">
+<h1>Learn IT, cloud, DevOps and security from zero.</h1>
+<p>Structured, hands-on courses for absolute beginners. No experience needed, and every course ends with a project you built yourself.</p>
+<div class="cta"><a class="btn" href="#courses">Explore courses</a><a class="btn ghost" href="#register">Register your interest</a></div>
+<div class="stats"><div><b>5</b><span>Beginner courses</span></div><div><b>6–8 weeks</b><span>Per course</span></div><div><b>Hands-on</b><span>Labs every week</span></div><div><b>Zero</b><span>Experience required</span></div></div>
+</div></div>
+<section id="courses"><div class="wrap">
+<h2>Pick your starting point</h2>
+<p class="sub">Select a course to see exactly what you will learn, week by week.</p>
+<div class="grid" role="tablist" aria-label="Courses" id="list"></div>
+<article class="panel" id="panel" role="tabpanel" aria-live="polite"></article>
+</div></section>
+<section id="why" class="why"><div class="wrap">
+<h2>How you will learn</h2>
+<p class="sub">Built around practice, because skills come from doing.</p>
+<div class="feat"><div><h3>Start at the very beginning</h3><p>Every course assumes you know nothing. New terms are explained before they are used.</p></div><div><h3>Practice in every lesson</h3><p>Weekly hands-on labs on real tools: Linux terminals, AWS, Docker, Terraform and more.</p></div><div><h3>Finish with a real project</h3><p>Each course ends with a capstone you can show to employers or add to your portfolio.</p></div></div>
+</div></section>
+<section id="register"><div class="wrap reg">
+<div><h2>Ready to start?</h2><p class="sub">Leave your details and we will contact you with start dates and fees.</p>
+<ul class="checks"><li>No payment needed to register interest</li><li>Pick one course or ask for a learning path</li><li>We reply with batch dates and fees</li></ul></div>
+<div class="form"><form id="f" novalidate>
+<label for="n">Full name</label><input id="n" autocomplete="name" required>
+<label for="p">Phone number</label><input id="p" type="tel" autocomplete="tel" inputmode="tel" required>
+<label for="e">Email</label><input id="e" type="email" autocomplete="email" required>
+<label for="c">Course you are interested in</label><select id="c"></select>
+<div style="position:absolute;left:-9999px" aria-hidden="true"><label for="w">Website</label><input id="w" tabindex="-1" autocomplete="off"></div>
+<p style="margin:22px 0 0"><button class="btn" type="submit" id="sb" style="width:100%">Register interest</button></p>
+<p class="note">We use these details only to contact you about courses.</p>
+<div class="msg" id="m" role="status"></div>
+</form></div>
+</div></section>
+</main>
+<footer><div class="wrap">© Techwright. IT, cloud, DevOps and cybersecurity training for absolute beginners.</div></footer>
+<script>
+var COURSES=[
+{id:"it",ic:"IT",t:"IT Fundamentals",d:"6 weeks",s:"How computers and networks work",o:"You will be able to set up a computer, fix common problems, and explain how the internet works.",m:[["How computers work","Hardware, operating systems, files and storage"],["Networking basics","IP addresses, DNS, Wi-Fi, routers and the internet"],["Windows and macOS essentials","Users, settings, software installs and updates"],["Troubleshooting","A step-by-step method for diagnosing common problems"],["Safe computing","Passwords, backups, malware and phishing basics"],["Mini project","Set up and document a small home or office network"]]},
+{id:"linux",ic:">_",t:"Linux for Beginners",d:"6 weeks",s:"The command line, from scratch",o:"You will be comfortable working in a Linux terminal and writing simple scripts.",m:[["Getting started","Install Linux in a virtual machine and meet the terminal"],["Files and folders","Navigate, create, copy, move and delete with commands"],["Users and permissions","Owners, groups, chmod and sudo"],["Working with text","Reading, searching and editing files with grep, nano and vim basics"],["Software and processes","Install packages, manage services and monitor the system"],["Shell scripting","Write a script that automates a daily task"]]},
+{id:"cloud",ic:"☁",t:"Cloud Computing with AWS",d:"8 weeks",s:"Your first cloud, step by step",o:"You will deploy a website on AWS and understand how cloud costs and security work.",m:[["Cloud concepts","What the cloud is, regions, and the pay-as-you-go model"],["Accounts and IAM","Create a safe AWS account, users, roles and permissions"],["Servers with EC2","Launch, connect to and secure a virtual server"],["Storage with S3","Buckets, static websites and access control"],["Networking with VPC","Subnets, gateways and security groups explained simply"],["Databases and monitoring","RDS basics, CloudWatch and billing alerts"],["Serverless taste","Run a small function with Lambda"],["Capstone","Deploy and secure a live website on AWS"]]},
+{id:"devops",ic:"∞",t:"DevOps Foundations",d:"8 weeks",s:"Ship software the modern way",o:"You will build a pipeline that tests and deploys an application automatically.",m:[["What DevOps means","Teams, culture, and the software delivery lifecycle"],["Git and GitHub","Commits, branches, pull requests and collaboration"],["Containers with Docker","Images, containers and running your first app"],["CI/CD pipelines","Automate build and test on every code change"],["Infrastructure as code","Create cloud resources with Terraform"],["Kubernetes basics","Pods, deployments and services, explained gently"],["Monitoring and logs","See what your application is doing in production"],["Capstone","Take an app from code to a live deployment, automatically"]]},
+{id:"sec",ic:"🔒",t:"Cybersecurity Foundations",d:"8 weeks",s:"Understand threats, learn to defend",o:"You will know how common attacks work and how to protect systems and accounts.",m:[["Security mindset","Confidentiality, integrity, availability and risk"],["Threats and attacks","Phishing, malware, ransomware and social engineering"],["Network security","Firewalls, VPNs, encryption and secure protocols"],["Identity and access","Passwords, multi-factor authentication and least privilege"],["Securing Linux and Windows","Hardening, updates and logging basics"],["Cloud security basics","Shared responsibility, IAM and securing storage"],["Detecting and responding","Reading logs, spotting incidents and first response steps"],["Capstone","Audit a small system and write a security report"]]}
+];
+var $=function(i){return document.getElementById(i)},list=$("list"),panel=$("panel"),sel=$("c");
+COURSES.forEach(function(c,i){
+var b=document.createElement("button");b.className="course";b.type="button";b.setAttribute("role","tab");b.dataset.id=c.id;
+var ic=document.createElement("span");ic.className="ic";ic.textContent=c.ic;var x=document.createElement("b");x.textContent=c.t;var s=document.createElement("small");s.textContent=c.s;var ch=document.createElement("span");ch.className="chip";ch.textContent=c.d+" · View syllabus";b.append(ic,x,s,ch);
+b.onclick=function(){show(c.id,true)};list.appendChild(b);
+var o=document.createElement("option");o.value=c.t;o.textContent=c.t;sel.appendChild(o)});
+function show(id,go){
+var c=COURSES.filter(function(k){return k.id===id})[0];
+document.querySelectorAll(".course").forEach(function(b){b.setAttribute("aria-selected",b.dataset.id===id)});
+panel.textContent="";
+var h=document.createElement("h3");h.textContent=c.t;
+var mt=document.createElement("div");mt.className="meta";mt.textContent=c.d+" · No experience needed";
+var h4=document.createElement("h4");h4.textContent="What you will learn";
+var ul=document.createElement("ul");ul.className="mods";
+c.m.forEach(function(m){var li=document.createElement("li");var b=document.createElement("b");b.textContent=m[0];var sp=document.createElement("span");sp.textContent=m[1];li.append(b,sp);ul.appendChild(li)});
+var oc=document.createElement("div");oc.className="outcome";oc.textContent=c.o;
+var bt=document.createElement("a");bt.className="btn";bt.href="#register";bt.style.marginTop="20px";bt.textContent="Register interest in this course";
+bt.onclick=function(){sel.value=c.t};
+panel.append(h,mt,h4,ul,oc,bt);if(go)panel.scrollIntoView({behavior:"smooth",block:"start"})}
+show("it");
+$("f").addEventListener("submit",async function(ev){
+ev.preventDefault();var m=$("m");m.className="msg";
+var n=$("n").value.trim(),p=$("p").value.trim(),e=$("e").value.trim();
+if(n.length<2){m.className="msg err";m.textContent="Enter your full name.";return}
+if(p.replace(/\D/g,"").length<8){m.className="msg err";m.textContent="Enter a valid phone number, at least 8 digits.";return}
+if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){m.className="msg err";m.textContent="Enter a valid email address.";return}
+$("sb").disabled=true;
+try{
+var r=await fetch("/api/register",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:n,phone:p,email:e,course:sel.value,website:$("w").value})});
+if(!r.ok)throw 0;ok()
+}catch(x){m.className="msg err";m.textContent="Sorry, your details could not be sent. Please try again in a moment.";$("sb").disabled=false}
+function ok(){m.className="msg ok";m.textContent="Thank you, "+n.split(" ")[0]+". We will contact you soon.";$("f").reset();$("sb").disabled=false}
+});
+</script>
+</body>
+</html>
