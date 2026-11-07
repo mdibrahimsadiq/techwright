@@ -3,146 +3,277 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Techwright – Learn IT, Cloud, DevOps and Cybersecurity from zero</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap">
+<meta name="color-scheme" content="dark">
+<title>Techwright Internships – Cloud and DevOps internships, ₹499 each</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Space+Grotesk:wght@400;500;700&display=swap">
 <style>
-:root{--bg:#f5f7fb;--surface:#fff;--ink:#0f1b2d;--muted:#56637a;--line:#dde4ef;--accent:#2f6bff;--accent-ink:#fff;--warm:#ffb020;--ok:#1d7a4d;--err:#b3261e;
+:root{--bg:#0b1120;--bg2:#0f172a;--card:#131c31;--ink:#e8edf5;--muted:#94a3b8;--line:#22304a;--accent:#4f7cff;--accent-hi:#6b91ff;--accent-soft:rgba(79,124,255,.13);--cloud:#e8a33d;--cloud-hi:#f0b555;--cloud-soft:rgba(232,163,61,.13);--live:#34d399;--ok:#34d399;--err:#f87171;--navy:#0b1120;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1220;--surface:#141e30;--ink:#e8edf6;--muted:#9aa8bf;--line:#26344d;--accent:#6c93ff;--accent-ink:#0b1220;--ok:#5fd09a;--err:#ff8a80}}
-:root[data-theme="dark"]{--bg:#0b1220;--surface:#141e30;--ink:#e8edf6;--muted:#9aa8bf;--line:#26344d;--accent:#6c93ff;--accent-ink:#0b1220;--ok:#5fd09a;--err:#ff8a80}
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Source Sans 3",system-ui,sans-serif}
-h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.12;margin:0;letter-spacing:-.02em}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Space Grotesk",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.02;margin:0;letter-spacing:-.035em}
 a{color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:#0b1220;border-bottom:1px solid #1d2a42;color:#fff}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
-.logo{font:800 23px "Bricolage Grotesque",sans-serif;text-decoration:none;letter-spacing:-.03em}
-.logo i{font-style:normal;color:#6c93ff}
-nav{display:flex;align-items:center;gap:28px}
-nav a{text-decoration:none;color:#b8c4da;font-weight:600;font-size:15px}
-nav a:hover{color:#fff}
-nav a.nb{background:#2f6bff;color:#fff;padding:9px 18px;border-radius:8px}
-.hero{background:radial-gradient(900px 420px at 85% -10%,rgba(47,107,255,.35),transparent 60%),#0b1220;color:#fff;padding:88px 0 0}
-.hero h1{font-size:clamp(40px,6.4vw,68px);font-weight:800;max-width:17ch}
-.hero p{font-size:20px;color:#b8c4da;max-width:56ch;margin:22px 0 0}
-.cta{display:flex;flex-wrap:wrap;gap:16px;margin-top:36px}
-.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--accent);color:var(--accent-ink);font:700 16px "Source Sans 3",sans-serif;border:0;border-radius:10px;padding:15px 28px;min-width:200px;cursor:pointer;text-decoration:none}
-.btn:hover{filter:brightness(1.1)}
-.btn.ghost{background:transparent;color:#fff;border:1.5px solid #3a4a68}
-.btn.ghost:hover{border-color:#fff;filter:none}
-:focus-visible{outline:3px solid var(--warm);outline-offset:2px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:64px;border-top:1px solid #1d2a42}
-.stats div{padding:26px 20px 26px 0}
-.stats b{display:block;font:700 26px "Bricolage Grotesque",sans-serif;color:#fff}
-.stats span{color:#9aa8bf;font-size:15px}
-section{padding:72px 0}
-h2{font-size:clamp(28px,4vw,40px);font-weight:700}
-.sub{color:var(--muted);margin:12px 0 32px;max-width:62ch}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.course{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:8px;padding:22px;border:1.5px solid var(--line);border-radius:14px;background:var(--surface)}
-.course:hover{border-color:var(--accent);transform:translateY(-2px)}
-.course[aria-selected="true"]{border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,107,255,.22)}
-.course:focus-visible{outline:3px solid var(--warm);outline-offset:2px}
-.ic{width:44px;height:44px;border-radius:10px;background:#0f1b2d;color:#fff;display:grid;place-items:center;font:700 16px "Bricolage Grotesque",monospace}
-.course b{font:700 20px "Bricolage Grotesque",sans-serif}
-.course small{color:var(--muted);font-size:15px;line-height:1.45}
-.chip{margin-top:auto;padding-top:6px;font-weight:600;font-size:14px;color:var(--accent)}
-.panel{margin-top:28px;background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:32px;scroll-margin-top:84px}
-.panel h3{font-size:30px;font-weight:700}
-.meta{color:var(--muted);font-weight:600;font-size:15px;margin:8px 0 6px}
-.panel h4{margin:22px 0 10px;font:700 17px "Source Sans 3",sans-serif}
-.mods{list-style:none;margin:0 0 0 70px;padding:0;counter-reset:m;border-left:2px solid var(--line)}
-.mods li{counter-increment:m;padding:9px 0 9px 22px;position:relative}
-.mods li::before{content:"Week " counter(m);position:absolute;left:-2px;top:9px;transform:translateX(-100%);padding-right:14px;font-size:13px;color:var(--muted);font-weight:600;white-space:nowrap}
-.mods li b{display:block}
-.mods li span{color:var(--muted);font-size:16px}
-.outcome{margin-top:22px;padding:16px 18px;background:var(--bg);border-radius:10px;border-left:4px solid var(--warm)}
-.why{background:var(--surface);border-block:1px solid var(--line)}
-.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
-.feat h3{font-size:21px;margin-bottom:8px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+:focus-visible{outline:3px solid var(--cloud);outline-offset:3px}
+.grad{background:linear-gradient(90deg,var(--accent-hi),#9db6ff 45%,var(--cloud));-webkit-background-clip:text;background-clip:text;color:transparent}
+.cl{color:var(--cloud)}.dv{color:var(--accent-hi)}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(11,17,32,.8);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:800 24px "Bricolage Grotesque",sans-serif;text-decoration:none;letter-spacing:-.04em}
+.logo i{font-style:normal;color:var(--accent-hi)}
+nav{display:flex;align-items:center;gap:26px}
+nav a{text-decoration:none;color:var(--muted);font-weight:500;font-size:15px}
+nav a:hover{color:var(--ink)}
+nav a.nb{background:var(--accent);color:#fff;padding:9px 18px;border-radius:999px;font-weight:700;box-shadow:3px 3px 0 var(--cloud);transition:transform .15s,box-shadow .15s}
+nav a.nb:hover{color:#fff;transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--cloud)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:#fff;font:700 16px "Space Grotesk",sans-serif;border:0;border-radius:999px;padding:16px 30px;cursor:pointer;text-decoration:none;box-shadow:4px 4px 0 var(--cloud);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--cloud)}
+.btn:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--cloud)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid #33425f;box-shadow:none}
+.btn.ghost:hover{border-color:var(--muted);transform:none}
+.btn:disabled{opacity:.6;cursor:wait}
+
+/* hero */
+.hero{position:relative;padding:84px 0 56px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-20% -10% auto auto;width:720px;height:720px;background:radial-gradient(circle,rgba(79,124,255,.32),transparent 62%);pointer-events:none}
+.hero::after{content:"";position:absolute;left:-200px;bottom:-260px;width:620px;height:620px;background:radial-gradient(circle,rgba(232,163,61,.12),transparent 62%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.pill{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);background:rgba(19,28,49,.85);border-radius:999px;padding:7px 16px 7px 8px;font-size:14px;font-weight:500;text-decoration:none}
+.pill b{background:var(--cloud);color:var(--navy);border-radius:999px;padding:2px 10px;font-size:12px;letter-spacing:.04em;white-space:nowrap}
+.dot{flex:none;width:8px;height:8px;border-radius:50%;background:var(--live);box-shadow:0 0 0 0 rgba(52,211,153,.6);animation:ping 1.8s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 10px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
+.hero h1{font-size:clamp(46px,8vw,104px);font-weight:800;max-width:13ch;margin-top:26px}
+.hero p.lead{font-size:20px;color:var(--muted);max-width:52ch;margin:26px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:16px;margin-top:38px}
+.stickers{position:absolute;right:24px;top:30px;width:340px;height:400px}
+.st{position:absolute;font:700 15px "Space Grotesk",sans-serif;padding:10px 16px;border-radius:14px;color:var(--navy);border:2px solid var(--navy);box-shadow:3px 3px 0 #000;animation:float 6s ease-in-out infinite}
+.st:nth-child(1){top:10px;left:40px;background:var(--cloud);transform:rotate(-8deg)}
+.st:nth-child(2){top:90px;right:0;background:var(--accent);color:#fff;transform:rotate(7deg);animation-delay:-1.5s}
+.st:nth-child(3){top:190px;left:0;background:#fff;transform:rotate(5deg);animation-delay:-3s}
+.st:nth-child(4){top:270px;right:30px;background:#9db6ff;transform:rotate(-6deg);animation-delay:-4.5s}
+.st:nth-child(5){top:345px;left:70px;background:var(--cloud-hi);transform:rotate(4deg);animation-delay:-2.2s}
+@keyframes float{50%{translate:0 -10px}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:68px}
+.stats div{background:rgba(19,28,49,.75);border:1px solid var(--line);border-radius:18px;padding:20px;transition:transform .2s,border-color .2s}
+.stats div:hover{transform:translateY(-3px);border-color:#33425f}
+.stats b{display:block;font:800 28px "Bricolage Grotesque",sans-serif;letter-spacing:-.03em}
+.stats span{color:var(--muted);font-size:14px}
+
+/* marquee */
+.mq{overflow:hidden;padding:16px 0}
+.marquee{background:var(--accent);color:#fff;overflow:hidden;transform:rotate(-1.2deg);margin:0 -20px;border-block:2px solid var(--navy);box-shadow:0 4px 0 var(--cloud)}
+.track{display:flex;gap:40px;width:max-content;padding:14px 0;font:800 22px "Bricolage Grotesque",sans-serif;letter-spacing:-.02em;animation:scroll 32s linear infinite}
+.track span::after{content:"✦";margin-left:40px;color:var(--cloud-hi)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+section{padding:96px 0}
+.eyebrow{display:inline-block;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--cloud);margin-bottom:14px}
+h2{font-size:clamp(34px,5.4vw,62px);font-weight:800}
+.sub{color:var(--muted);margin:16px 0 40px;max-width:58ch;font-size:18px}
+
+/* open internships */
+.open{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.feature{--c:var(--cloud);--c2:#f6cf8e;--cink:var(--navy);--cs:var(--cloud-soft);position:relative;border-radius:26px;padding:2px;background:linear-gradient(135deg,var(--c),var(--c2) 50%,#33425f);transition:transform .2s}
+.feature.devops{--c:var(--accent);--c2:#9db6ff;--cink:#fff;--cs:var(--accent-soft)}
+.feature:hover{transform:translateY(-4px)}
+.feature-in{background:var(--bg2);border-radius:24px;padding:32px;height:100%;display:flex;flex-direction:column}
+.ftop{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:22px}
+.ficon{width:76px;height:76px;border-radius:20px;background:var(--cs);border:2px solid var(--c);display:grid;place-items:center;font-size:38px;transform:rotate(-6deg);box-shadow:4px 4px 0 var(--c);flex:none}
+.price{text-align:right;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px 16px}
+.price b{display:block;font:800 34px "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;color:var(--c);line-height:1.1}
+.price span{font-size:13px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.tag{font-size:13px;font-weight:700;padding:5px 12px;border-radius:999px;border:1px solid #33425f;color:var(--muted)}
+.tag.hot{background:var(--c);border-color:var(--c);color:var(--cink)}
+.feature h3{font-size:clamp(30px,3.6vw,42px);font-weight:800}
+.feature .tagline{color:var(--muted);font-size:17px;margin:10px 0 0}
+.weeks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:26px 0 0;list-style:none;padding:0;counter-reset:w}
+.weeks li{counter-increment:w;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;transition:border-color .2s,transform .2s}
+.weeks li:hover{border-color:var(--c);transform:translateY(-2px)}
+.weeks li::before{content:"WEEK " counter(w,decimal-leading-zero);display:block;font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--c);margin-bottom:4px}
+.weeks li:last-child{background:var(--cs);border-color:var(--c)}
+.weeks b{display:block;font:700 16px "Bricolage Grotesque",sans-serif;letter-spacing:-.01em}
+.weeks span{display:block;color:var(--muted);font-size:14px;line-height:1.4;margin-top:2px}
+.ai{display:flex;gap:14px;align-items:flex-start;margin-top:22px;padding:16px 18px;border-radius:16px;background:var(--cs);border:1.5px dashed var(--c)}
+.ai .aic{flex:none;width:40px;height:40px;border-radius:12px;background:var(--c);color:var(--cink);display:grid;place-items:center;font-size:20px;transform:rotate(-6deg);box-shadow:3px 3px 0 #000}
+.ai b{display:block;font:700 16px "Bricolage Grotesque",sans-serif;letter-spacing:-.01em}
+.ai span{display:block;color:var(--muted);font-size:14px;line-height:1.45;margin-top:3px}
+.get{margin-top:24px;padding-top:22px;border-top:1px dashed #33425f}
+.get h4{margin:0 0 10px;font:700 14px "Space Grotesk",sans-serif;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 12px;font-weight:500;font-size:14px}
+.feature .btn{margin-top:26px;width:100%;background:var(--c);color:var(--cink);box-shadow:4px 4px 0 #000}
+.feature .btn:hover{box-shadow:6px 6px 0 #000}
+.feature .btn:active{box-shadow:2px 2px 0 #000}
+
+/* coming soon */
+.soon{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:10px;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-3px) rotate(-.5deg);border-color:#33425f}
+.card .ic{font-size:30px;line-height:1.6;min-height:1.6em}
+.card b{font:700 21px "Bricolage Grotesque",sans-serif;letter-spacing:-.02em}
+.card small{color:var(--muted);font-size:15px;line-height:1.45}
+.card .tag{align-self:flex-start}
+.wl{all:unset;cursor:pointer;margin-top:auto;padding-top:8px;font-weight:700;font-size:15px;color:var(--accent-hi)}
+.wl:hover{text-decoration:underline}
+.wl:focus-visible{outline:3px solid var(--cloud);outline-offset:3px;border-radius:4px}
+
+/* why */
+.why{background:var(--bg2);border-block:1px solid var(--line)}
+.feat{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.feat div{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;transition:transform .2s,box-shadow .2s}
+.feat div:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--accent)}
+.feat .em{font-size:36px;display:block;margin-bottom:14px;line-height:1.6;min-height:1.6em}
+.feat h3{font-size:24px;margin-bottom:10px}
 .feat p{margin:0;color:var(--muted)}
-.reg{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
-.form{background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:28px}
-label{display:block;font-weight:600;margin:16px 0 6px;font-size:15px}
+
+/* apply */
+.reg{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.form{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:8px 8px 0 var(--accent)}
+label{display:block;font-weight:700;margin:18px 0 7px;font-size:14px}
 label:first-child{margin-top:0}
-input,select{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:8px;padding:12px}
+input,select{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:13px 14px}
+input:focus,select:focus{border-color:var(--accent);outline:none}
+select option{background:var(--bg2)}
 .note{color:var(--muted);font-size:14px;margin:14px 0 0}
-.msg{margin-top:14px;font-weight:600}
+.msg{margin-top:14px;font-weight:700}
 .msg.ok{color:var(--ok)}.msg.err{color:var(--err)}
-.checks{list-style:none;padding:0;margin:22px 0 0}
-.checks li{padding:6px 0 6px 28px;position:relative}
-.checks li::before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:700}
-footer{background:#0b1220;color:#9aa8bf;padding:32px 0;font-size:15px}
-@media (max-width:860px){.grid,.feat,.reg{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}nav a:not(.nb){display:none}.mods{margin-left:0;border-left:0}.mods li{padding-left:0}.mods li::before{position:static;transform:none;display:block;padding:0}.btn{width:100%}.hero{padding-top:56px}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.course:hover{transform:none}}
+.checks{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px}
+.checks li{display:flex;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px}
+.checks li::before{content:"✓";display:grid;place-items:center;flex:none;width:26px;height:26px;border-radius:50%;background:var(--cloud);color:var(--navy);font-weight:800;font-size:14px}
+footer{border-top:1px solid var(--line);color:var(--muted);padding:34px 0;font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+@media (max-width:1040px){.stickers{display:none}.open{grid-template-columns:1fr}.feat{grid-template-columns:1fr 1fr}}
+@media (max-width:760px){
+.feat,.reg,.soon{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}
+nav a:not(.nb){display:none}.btn{width:100%}.hero{padding-top:52px}
+.feature-in{padding:24px 18px}.ficon{width:62px;height:62px;font-size:30px;border-radius:16px}
+section{padding:72px 0}.form{padding:24px 20px;box-shadow:5px 5px 0 var(--accent)}}
+@media (max-width:440px){.weeks{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.track,.st,.dot{animation:none}*{transition:none!important}}
 </style>
 </head>
 <body>
-<header><div class="wrap"><a class="logo" href="#top">Tech<i>wright</i></a><nav><a href="#courses">Courses</a><a href="#why">Why Techwright</a><a class="nb" href="#register">Register interest</a></nav></div></header>
+<header><div class="wrap"><a class="logo" href="#top">tech<i>wright</i></a><nav><a href="#internships">Internships</a><a href="#next">Coming soon</a><a href="#why">How it works</a><a class="nb" href="#apply">Register ↗</a></nav></div></header>
 <main id="top">
+
 <div class="hero"><div class="wrap">
-<h1>Learn IT, cloud, DevOps and security from zero.</h1>
-<p>Structured, hands-on courses for absolute beginners. No experience needed, and every course ends with a project you built yourself.</p>
-<div class="cta"><a class="btn" href="#courses">Explore courses</a><a class="btn ghost" href="#register">Register your interest</a></div>
-<div class="stats"><div><b>5</b><span>Beginner courses</span></div><div><b>6–8 weeks</b><span>Per course</span></div><div><b>Hands-on</b><span>Labs every week</span></div><div><b>Zero</b><span>Experience required</span></div></div>
+<a class="pill" href="#internships"><b>BATCH 01</b><span class="dot" aria-hidden="true"></span>Cloud &amp; DevOps internships open · ₹499 each</a>
+<h1>Stop watching tutorials. <span class="grad">Start building real infra.</span></h1>
+<p class="lead">8-week, mentor-led Cloud and DevOps internships for students and fresh grads. Real tasks every week, training in AI-assisted cloud and DevOps work with Claude, honest feedback, and a project that proves you can actually do the job. Just ₹499 each.</p>
+<div class="cta"><a class="btn" href="#apply">Register for Batch 01 →</a><a class="btn ghost" href="#internships">See the internships</a></div>
+<div class="stickers" aria-hidden="true"><span class="st">☁️ AWS</span><span class="st">📦 Docker</span><span class="st">✨ Claude AI</span><span class="st">☸️ Kubernetes</span><span class="st">🔁 CI/CD</span></div>
+<div class="stats"><div><b>2 tracks</b><span>Cloud &amp; DevOps, open now</span></div><div><b>8 weeks</b><span>Per internship</span></div><div><b>₹499 each</b><span>Per 8-week internship</span></div><div><b>1 mentor</b><span>Reviews your work weekly</span></div></div>
 </div></div>
-<section id="courses"><div class="wrap">
-<h2>Pick your starting point</h2>
-<p class="sub">Select a course to see exactly what you will learn, week by week.</p>
-<div class="grid" role="tablist" aria-label="Courses" id="list"></div>
-<article class="panel" id="panel" role="tabpanel" aria-live="polite"></article>
+
+<div class="mq" aria-hidden="true"><div class="marquee"><div class="track">
+<span>AWS</span><span>EC2</span><span>S3</span><span>Docker</span><span>Kubernetes</span><span>Terraform</span><span>GitHub Actions</span><span>Claude AI</span><span>CloudWatch</span><span>Linux</span>
+<span>AWS</span><span>EC2</span><span>S3</span><span>Docker</span><span>Kubernetes</span><span>Terraform</span><span>GitHub Actions</span><span>Claude AI</span><span>CloudWatch</span><span>Linux</span>
+</div></div></div>
+
+<section id="internships"><div class="wrap">
+<span class="eyebrow">Open now · Batch 01</span>
+<h2>Pick your track: <span class="cl">Cloud</span> or <span class="dv">DevOps</span></h2>
+<p class="sub">Eight weeks, eight real tasks. Each week builds on the last, and by the end you will have a working project you built yourself and can explain in an interview.</p>
+<div class="open">
+
+<article class="feature cloud" id="cloud"><div class="feature-in">
+<div class="ftop"><div class="ficon" aria-hidden="true">☁️</div><div class="price"><b>₹499</b><span>full 8 weeks</span></div></div>
+<div class="tags"><span class="tag hot">🔥 Open now</span><span class="tag">8 weeks</span><span class="tag">Mentor-led</span><span class="tag">✨ AI-assisted</span></div>
+<h3>Cloud Intern (AWS)</h3>
+<p class="tagline">Build and run real infrastructure on AWS, from your first server to a fully deployed, monitored website.</p>
+<div class="ai"><span class="aic" aria-hidden="true">✨</span><div><b>Includes AI-assisted cloud training with Claude</b><span>Learn to work like modern cloud engineers: use Claude to draft IAM policies, explain AWS errors, review your architecture and speed up troubleshooting.</span></div></div>
+<ol class="weeks">
+<li><b>Onboarding</b><span>Safe AWS account, IAM and billing alerts</span></li>
+<li><b>Compute</b><span>Launch and harden EC2 servers</span></li>
+<li><b>Storage</b><span>Host assets on S3 with access controls</span></li>
+<li><b>Networking</b><span>Build a VPC with public and private subnets</span></li>
+<li><b>Databases</b><span>Connect the app to RDS</span></li>
+<li><b>Monitoring</b><span>CloudWatch dashboards and alarms</span></li>
+<li><b>Serverless</b><span>Swap a component for Lambda</span></li>
+<li><b>Final project 🏁</b><span>Deploy and present a live site on AWS</span></li>
+</ol>
+<div class="get"><h4>What you walk away with</h4><div class="chips"><span>🌐 Live AWS project</span><span>✨ Claude AI skills</span><span>📜 Certificate</span><span>🧠 Mentor feedback</span><span>📁 Portfolio write-up</span></div></div>
+<a class="btn" href="#apply" data-track="Cloud Internship (AWS)">Register for Cloud →</a>
+</div></article>
+
+<article class="feature devops" id="devops"><div class="feature-in">
+<div class="ftop"><div class="ficon" aria-hidden="true">♾️</div><div class="price"><b>₹499</b><span>full 8 weeks</span></div></div>
+<div class="tags"><span class="tag hot">🔥 Open now</span><span class="tag">8 weeks</span><span class="tag">Mentor-led</span><span class="tag">✨ AI-assisted</span></div>
+<h3>DevOps Intern</h3>
+<p class="tagline">Automate how software ships, from Git and Docker to a pipeline that deploys to Kubernetes on its own.</p>
+<div class="ai"><span class="aic" aria-hidden="true">✨</span><div><b>Includes AI-assisted DevOps training with Claude</b><span>Learn to work like modern DevOps engineers: use Claude to write Dockerfiles, CI/CD pipelines and Terraform, and to debug failed builds faster.</span></div></div>
+<ol class="weeks">
+<li><b>Onboarding</b><span>Join the team repo and review process</span></li>
+<li><b>Git workflow</b><span>Ship changes through pull requests</span></li>
+<li><b>Containers</b><span>Containerise an app with Docker</span></li>
+<li><b>CI/CD</b><span>Test every change automatically</span></li>
+<li><b>Infra as code</b><span>Provision the environment with Terraform</span></li>
+<li><b>Kubernetes</b><span>Deploy the app to a cluster</span></li>
+<li><b>Monitoring</b><span>Logs, alerts and a simulated incident</span></li>
+<li><b>Final project 🏁</b><span>Commit to live deploy, fully automated</span></li>
+</ol>
+<div class="get"><h4>What you walk away with</h4><div class="chips"><span>🚀 Working CI/CD pipeline</span><span>✨ Claude AI skills</span><span>📜 Certificate</span><span>🧠 Mentor feedback</span><span>📁 GitHub portfolio</span></div></div>
+<a class="btn" href="#apply" data-track="DevOps Internship">Register for DevOps →</a>
+</div></article>
+
+</div>
 </div></section>
+
+<section id="next" style="padding-top:0"><div class="wrap">
+<span class="eyebrow">Dropping next</span>
+<h2>More tracks are on the way</h2>
+<p class="sub">Into something else? Join a waitlist and you will hear first when your track opens.</p>
+<div class="soon">
+<div class="card"><span class="ic" aria-hidden="true">🔒</span><span class="tag">Coming soon</span><b>Cybersecurity Intern</b><small>Find weaknesses, harden systems and respond to incidents.</small><button class="wl" type="button" data-track="Waitlist: Cybersecurity Intern">Join waitlist →</button></div>
+<div class="card"><span class="ic" aria-hidden="true">🖥️</span><span class="tag">Coming soon</span><b>Linux Admin Intern</b><small>Run, troubleshoot and automate real Linux servers.</small><button class="wl" type="button" data-track="Waitlist: Linux Admin Intern">Join waitlist →</button></div>
+<div class="card"><span class="ic" aria-hidden="true">🛠️</span><span class="tag">Coming soon</span><b>IT Support Intern</b><small>Solve real help desk tickets and set up office networks.</small><button class="wl" type="button" data-track="Waitlist: IT Support Intern">Join waitlist →</button></div>
+</div>
+</div></section>
+
 <section id="why" class="why"><div class="wrap">
-<h2>How you will learn</h2>
-<p class="sub">Built around practice, because skills come from doing.</p>
-<div class="feat"><div><h3>Start at the very beginning</h3><p>Every course assumes you know nothing. New terms are explained before they are used.</p></div><div><h3>Practice in every lesson</h3><p>Weekly hands-on labs on real tools: Linux terminals, AWS, Docker, Terraform and more.</p></div><div><h3>Finish with a real project</h3><p>Each course ends with a capstone you can show to employers or add to your portfolio.</p></div></div>
+<span class="eyebrow">How it works</span>
+<h2>Less lecture. <span class="grad">More doing.</span></h2>
+<p class="sub">You learn by doing real work, with someone experienced checking it.</p>
+<div class="feat">
+<div><span class="em" aria-hidden="true">🧪</span><h3>Real tasks, every week</h3><p>No hour-long videos. Each week you get a task like the ones junior cloud and DevOps engineers get, and you ship it.</p></div>
+<div><span class="em" aria-hidden="true">✨</span><h3>AI-assisted, the right way</h3><p>Learn to use Claude the way working engineers do: to move faster, while still understanding every line you ship.</p></div>
+<div><span class="em" aria-hidden="true">💬</span><h3>A real mentor</h3><p>A mentor reviews your work every week, answers your questions and tells you exactly what to level up.</p></div>
+<div><span class="em" aria-hidden="true">🧾</span><h3>Proof for your CV</h3><p>A working project, an internship certificate and a write-up you can drop straight into your CV and LinkedIn.</p></div>
+</div>
 </div></section>
-<section id="register"><div class="wrap reg">
-<div><h2>Ready to start?</h2><p class="sub">Leave your details and we will contact you with start dates and fees.</p>
-<ul class="checks"><li>No payment needed to register interest</li><li>Pick one course or ask for a learning path</li><li>We reply with batch dates and fees</li></ul></div>
+
+<section id="apply"><div class="wrap reg">
+<div><span class="eyebrow">Register</span><h2>Your tech era <span class="grad">starts here.</span></h2><p class="sub">Drop your details and we will get back to you with Batch 01 dates and next steps.</p>
+<ul class="checks"><li>Open to students and fresh grads</li><li>No prior work experience needed</li><li>Takes under a minute</li></ul></div>
 <div class="form"><form id="f" novalidate>
-<label for="n">Full name</label><input id="n" autocomplete="name" required>
-<label for="p">Phone number</label><input id="p" type="tel" autocomplete="tel" inputmode="tel" required>
-<label for="e">Email</label><input id="e" type="email" autocomplete="email" required>
-<label for="c">Course you are interested in</label><select id="c"></select>
+<label for="n">Full name</label><input id="n" autocomplete="name" required placeholder="Your name">
+<label for="p">Phone number</label><input id="p" type="tel" autocomplete="tel" inputmode="tel" required placeholder="+91 98765 43210">
+<label for="e">Email</label><input id="e" type="email" autocomplete="email" required placeholder="you@example.com">
+<label for="c">Internship</label><select id="c">
+<option>Cloud Internship (AWS)</option>
+<option>DevOps Internship</option>
+<option>Waitlist: Cybersecurity Intern</option>
+<option>Waitlist: Linux Admin Intern</option>
+<option>Waitlist: IT Support Intern</option>
+</select>
 <div style="position:absolute;left:-9999px" aria-hidden="true"><label for="w">Website</label><input id="w" tabindex="-1" autocomplete="off"></div>
-<p style="margin:22px 0 0"><button class="btn" type="submit" id="sb" style="width:100%">Register interest</button></p>
-<p class="note">We use these details only to contact you about courses.</p>
+<p style="margin:24px 0 0"><button class="btn" type="submit" id="sb" style="width:100%">Register now 🚀</button></p>
+<p class="note">We use these details only to contact you about your registration.</p>
 <div class="msg" id="m" role="status"></div>
 </form></div>
 </div></section>
 </main>
-<footer><div class="wrap">© Techwright. IT, cloud, DevOps and cybersecurity training for absolute beginners.</div></footer>
+<footer><div class="wrap"><span>© Techwright. Cloud and DevOps internships, with more tracks coming soon.</span><a href="#top">Back to top ↑</a></div></footer>
 <script>
-var COURSES=[
-{id:"it",ic:"IT",t:"IT Fundamentals",d:"6 weeks",s:"How computers and networks work",o:"You will be able to set up a computer, fix common problems, and explain how the internet works.",m:[["How computers work","Hardware, operating systems, files and storage"],["Networking basics","IP addresses, DNS, Wi-Fi, routers and the internet"],["Windows and macOS essentials","Users, settings, software installs and updates"],["Troubleshooting","A step-by-step method for diagnosing common problems"],["Safe computing","Passwords, backups, malware and phishing basics"],["Mini project","Set up and document a small home or office network"]]},
-{id:"linux",ic:">_",t:"Linux for Beginners",d:"6 weeks",s:"The command line, from scratch",o:"You will be comfortable working in a Linux terminal and writing simple scripts.",m:[["Getting started","Install Linux in a virtual machine and meet the terminal"],["Files and folders","Navigate, create, copy, move and delete with commands"],["Users and permissions","Owners, groups, chmod and sudo"],["Working with text","Reading, searching and editing files with grep, nano and vim basics"],["Software and processes","Install packages, manage services and monitor the system"],["Shell scripting","Write a script that automates a daily task"]]},
-{id:"cloud",ic:"☁",t:"Cloud Computing with AWS",d:"8 weeks",s:"Your first cloud, step by step",o:"You will deploy a website on AWS and understand how cloud costs and security work.",m:[["Cloud concepts","What the cloud is, regions, and the pay-as-you-go model"],["Accounts and IAM","Create a safe AWS account, users, roles and permissions"],["Servers with EC2","Launch, connect to and secure a virtual server"],["Storage with S3","Buckets, static websites and access control"],["Networking with VPC","Subnets, gateways and security groups explained simply"],["Databases and monitoring","RDS basics, CloudWatch and billing alerts"],["Serverless taste","Run a small function with Lambda"],["Capstone","Deploy and secure a live website on AWS"]]},
-{id:"devops",ic:"∞",t:"DevOps Foundations",d:"8 weeks",s:"Ship software the modern way",o:"You will build a pipeline that tests and deploys an application automatically.",m:[["What DevOps means","Teams, culture, and the software delivery lifecycle"],["Git and GitHub","Commits, branches, pull requests and collaboration"],["Containers with Docker","Images, containers and running your first app"],["CI/CD pipelines","Automate build and test on every code change"],["Infrastructure as code","Create cloud resources with Terraform"],["Kubernetes basics","Pods, deployments and services, explained gently"],["Monitoring and logs","See what your application is doing in production"],["Capstone","Take an app from code to a live deployment, automatically"]]},
-{id:"sec",ic:"🔒",t:"Cybersecurity Foundations",d:"8 weeks",s:"Understand threats, learn to defend",o:"You will know how common attacks work and how to protect systems and accounts.",m:[["Security mindset","Confidentiality, integrity, availability and risk"],["Threats and attacks","Phishing, malware, ransomware and social engineering"],["Network security","Firewalls, VPNs, encryption and secure protocols"],["Identity and access","Passwords, multi-factor authentication and least privilege"],["Securing Linux and Windows","Hardening, updates and logging basics"],["Cloud security basics","Shared responsibility, IAM and securing storage"],["Detecting and responding","Reading logs, spotting incidents and first response steps"],["Capstone","Audit a small system and write a security report"]]}
-];
-var $=function(i){return document.getElementById(i)},list=$("list"),panel=$("panel"),sel=$("c");
-COURSES.forEach(function(c,i){
-var b=document.createElement("button");b.className="course";b.type="button";b.setAttribute("role","tab");b.dataset.id=c.id;
-var ic=document.createElement("span");ic.className="ic";ic.textContent=c.ic;var x=document.createElement("b");x.textContent=c.t;var s=document.createElement("small");s.textContent=c.s;var ch=document.createElement("span");ch.className="chip";ch.textContent=c.d+" · View syllabus";b.append(ic,x,s,ch);
-b.onclick=function(){show(c.id,true)};list.appendChild(b);
-var o=document.createElement("option");o.value=c.t;o.textContent=c.t;sel.appendChild(o)});
-function show(id,go){
-var c=COURSES.filter(function(k){return k.id===id})[0];
-document.querySelectorAll(".course").forEach(function(b){b.setAttribute("aria-selected",b.dataset.id===id)});
-panel.textContent="";
-var h=document.createElement("h3");h.textContent=c.t;
-var mt=document.createElement("div");mt.className="meta";mt.textContent=c.d+" · No experience needed";
-var h4=document.createElement("h4");h4.textContent="What you will learn";
-var ul=document.createElement("ul");ul.className="mods";
-c.m.forEach(function(m){var li=document.createElement("li");var b=document.createElement("b");b.textContent=m[0];var sp=document.createElement("span");sp.textContent=m[1];li.append(b,sp);ul.appendChild(li)});
-var oc=document.createElement("div");oc.className="outcome";oc.textContent=c.o;
-var bt=document.createElement("a");bt.className="btn";bt.href="#register";bt.style.marginTop="20px";bt.textContent="Register interest in this course";
-bt.onclick=function(){sel.value=c.t};
-panel.append(h,mt,h4,ul,oc,bt);if(go)panel.scrollIntoView({behavior:"smooth",block:"start"})}
-show("it");
+var $=function(i){return document.getElementById(i)},sel=$("c");
+document.querySelectorAll("[data-track]").forEach(function(b){b.addEventListener("click",function(){sel.value=b.dataset.track;if(b.tagName==="BUTTON"){$("apply").scrollIntoView({behavior:"smooth"});setTimeout(function(){$("n").focus({preventScroll:true})},500)}})});
 $("f").addEventListener("submit",async function(ev){
 ev.preventDefault();var m=$("m");m.className="msg";
 var n=$("n").value.trim(),p=$("p").value.trim(),e=$("e").value.trim();
@@ -152,9 +283,9 @@ if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){m.className="msg err";m.textContent="E
 $("sb").disabled=true;
 try{
 var r=await fetch("/api/register",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:n,phone:p,email:e,course:sel.value,website:$("w").value})});
-if(!r.ok)throw 0;ok()
+if(!r.ok)throw 0;
+m.className="msg ok";m.textContent=(sel.value.indexOf("Waitlist")===0?"You're on the list, ":"You're registered, ")+n.split(" ")[0]+"! We'll be in touch soon. ✨";$("f").reset();$("sb").disabled=false
 }catch(x){m.className="msg err";m.textContent="Sorry, your details could not be sent. Please try again in a moment.";$("sb").disabled=false}
-function ok(){m.className="msg ok";m.textContent="Thank you, "+n.split(" ")[0]+". We will contact you soon.";$("f").reset();$("sb").disabled=false}
 });
 </script>
 </body>
