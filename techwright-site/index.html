@@ -4,6 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="dark">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0b1120">
 <title>Techwright Internships – Cloud and DevOps internships, ₹499 each</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Space+Grotesk:wght@400;500;700&display=swap">
 <style>
@@ -36,7 +40,9 @@ nav a.nb:hover{color:#fff;transform:translate(-1px,-1px);box-shadow:4px 4px 0 va
 .btn:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--cloud)}
 .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid #33425f;box-shadow:none}
 .btn.ghost:hover{border-color:var(--muted);transform:none}
-.btn:disabled{opacity:.6;cursor:wait}
+.btn:disabled{opacity:.85;cursor:wait}
+.btn.loading::before{content:"";width:16px;height:16px;border:2.5px solid currentColor;border-right-color:transparent;border-radius:50%;animation:sp .7s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
 
 /* hero */
 .hero{position:relative;padding:84px 0 56px;overflow:hidden}
@@ -133,6 +139,9 @@ h2{font-size:clamp(34px,5.4vw,62px);font-weight:800}
 .feat p{margin:0;color:var(--muted)}
 
 /* apply */
+#register-form{scroll-margin-top:92px}
+.form.flash{animation:flash 1.4s ease-out}
+@keyframes flash{0%{outline:3px solid var(--cloud);outline-offset:0}100%{outline:3px solid transparent;outline-offset:14px}}
 .reg{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
 .form{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:8px 8px 0 var(--accent)}
 label{display:block;font-weight:700;margin:18px 0 7px;font-size:14px}
@@ -156,18 +165,18 @@ nav a:not(.nb){display:none}.btn{width:100%}.hero{padding-top:52px}
 .feature-in{padding:24px 18px}.ficon{width:62px;height:62px;font-size:30px;border-radius:16px}
 section{padding:72px 0}.form{padding:24px 20px;box-shadow:5px 5px 0 var(--accent)}}
 @media (max-width:440px){.weeks{grid-template-columns:1fr}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.track,.st,.dot{animation:none}*{transition:none!important}}
+@media (prefers-reduced-motion:reduce){.form.flash{animation:none}.btn.loading::before{animation-duration:2.5s}html{scroll-behavior:auto}.track,.st,.dot{animation:none}*{transition:none!important}}
 </style>
 </head>
 <body>
-<header><div class="wrap"><a class="logo" href="#top">tech<i>wright</i></a><nav><a href="#internships">Internships</a><a href="#next">Coming soon</a><a href="#why">How it works</a><a class="nb" href="#apply">Register ↗</a></nav></div></header>
+<header><div class="wrap"><a class="logo" href="#top">tech<i>wright</i></a><nav><a href="#internships">Internships</a><a href="#next">Coming soon</a><a href="#why">How it works</a><a class="nb" href="#register-form">Register ↗</a></nav></div></header>
 <main id="top">
 
 <div class="hero"><div class="wrap">
 <a class="pill" href="#internships"><b>BATCH 01</b><span class="dot" aria-hidden="true"></span>Cloud &amp; DevOps internships open · ₹499 each</a>
 <h1>Stop watching tutorials. <span class="grad">Start building real infra.</span></h1>
 <p class="lead">8-week, mentor-led Cloud and DevOps internships for students and fresh grads. Real tasks every week, training in AI-assisted cloud and DevOps work with Claude, honest feedback, and a project that proves you can actually do the job. Just ₹499 each.</p>
-<div class="cta"><a class="btn" href="#apply">Register for Batch 01 →</a><a class="btn ghost" href="#internships">See the internships</a></div>
+<div class="cta"><a class="btn" href="#register-form">Register for Batch 01 →</a><a class="btn ghost" href="#internships">See the internships</a></div>
 <div class="stickers" aria-hidden="true"><span class="st">☁️ AWS</span><span class="st">📦 Docker</span><span class="st">✨ Claude AI</span><span class="st">☸️ Kubernetes</span><span class="st">🔁 CI/CD</span></div>
 <div class="stats"><div><b>2 tracks</b><span>Cloud &amp; DevOps, open now</span></div><div><b>8 weeks</b><span>Per internship</span></div><div><b>₹499 each</b><span>Per 8-week internship</span></div><div><b>1 mentor</b><span>Reviews your work weekly</span></div></div>
 </div></div>
@@ -200,7 +209,7 @@ section{padding:72px 0}.form{padding:24px 20px;box-shadow:5px 5px 0 var(--accent
 <li><b>Final project 🏁</b><span>Deploy and present a live site on AWS</span></li>
 </ol>
 <div class="get"><h4>What you walk away with</h4><div class="chips"><span>🌐 Live AWS project</span><span>✨ Claude AI skills</span><span>📜 Certificate</span><span>🧠 Mentor feedback</span><span>📁 Portfolio write-up</span></div></div>
-<a class="btn" href="#apply" data-track="Cloud Internship (AWS)">Register for Cloud →</a>
+<a class="btn" href="#register-form" data-track="Cloud Internship (AWS)">Register for Cloud →</a>
 </div></article>
 
 <article class="feature devops" id="devops"><div class="feature-in">
@@ -220,7 +229,7 @@ section{padding:72px 0}.form{padding:24px 20px;box-shadow:5px 5px 0 var(--accent
 <li><b>Final project 🏁</b><span>Commit to live deploy, fully automated</span></li>
 </ol>
 <div class="get"><h4>What you walk away with</h4><div class="chips"><span>🚀 Working CI/CD pipeline</span><span>✨ Claude AI skills</span><span>📜 Certificate</span><span>🧠 Mentor feedback</span><span>📁 GitHub portfolio</span></div></div>
-<a class="btn" href="#apply" data-track="DevOps Internship">Register for DevOps →</a>
+<a class="btn" href="#register-form" data-track="DevOps Internship">Register for DevOps →</a>
 </div></article>
 
 </div>
@@ -252,7 +261,7 @@ section{padding:72px 0}.form{padding:24px 20px;box-shadow:5px 5px 0 var(--accent
 <section id="apply"><div class="wrap reg">
 <div><span class="eyebrow">Register</span><h2>Your tech era <span class="grad">starts here.</span></h2><p class="sub">Drop your details and we will get back to you with Batch 01 dates and next steps.</p>
 <ul class="checks"><li>Open to students and fresh grads</li><li>No prior work experience needed</li><li>Takes under a minute</li></ul></div>
-<div class="form"><form id="f" novalidate>
+<div class="form" id="register-form"><form id="f" novalidate>
 <label for="n">Full name</label><input id="n" autocomplete="name" required placeholder="Your name">
 <label for="p">Phone number</label><input id="p" type="tel" autocomplete="tel" inputmode="tel" required placeholder="+91 98765 43210">
 <label for="e">Email</label><input id="e" type="email" autocomplete="email" required placeholder="you@example.com">
@@ -272,20 +281,32 @@ section{padding:72px 0}.form{padding:24px 20px;box-shadow:5px 5px 0 var(--accent
 </main>
 <footer><div class="wrap"><span>© Techwright. Cloud and DevOps internships, with more tracks coming soon.</span><a href="#top">Back to top ↑</a></div></footer>
 <script>
+var SHEET_URL="https://script.google.com/macros/s/AKfycbxZEzX8qOF4YGZeC8jBLbvbKmd46sfUKNg1vNozoNTkl61vS-AHQXLRMPSuejk5x5RIkg/exec";
+var CONTACT_EMAIL="";
 var $=function(i){return document.getElementById(i)},sel=$("c");
-document.querySelectorAll("[data-track]").forEach(function(b){b.addEventListener("click",function(){sel.value=b.dataset.track;if(b.tagName==="BUTTON"){$("apply").scrollIntoView({behavior:"smooth"});setTimeout(function(){$("n").focus({preventScroll:true})},500)}})});
+function toForm(){var f=$("register-form"),r=matchMedia("(prefers-reduced-motion: reduce)").matches;
+f.scrollIntoView({behavior:r?"auto":"smooth",block:"start"});
+f.classList.remove("flash");void f.offsetWidth;f.classList.add("flash");
+setTimeout(function(){$("n").focus({preventScroll:true})},r?0:600)}
+document.querySelectorAll('a[href="#register-form"],button[data-track]').forEach(function(b){b.addEventListener("click",function(ev){ev.preventDefault();if(b.dataset.track)sel.value=b.dataset.track;toForm()})});
+var LBL=$("sb").textContent;
+function busy(on){var b=$("sb");b.disabled=on;b.classList.toggle("loading",on);b.textContent=on?"Registering…":LBL;$("f").setAttribute("aria-busy",String(on));$("f").querySelectorAll("input,select").forEach(function(i){i.disabled=on})}
 $("f").addEventListener("submit",async function(ev){
 ev.preventDefault();var m=$("m");m.className="msg";
 var n=$("n").value.trim(),p=$("p").value.trim(),e=$("e").value.trim();
 if(n.length<2){m.className="msg err";m.textContent="Enter your full name.";return}
 if(p.replace(/\D/g,"").length<8){m.className="msg err";m.textContent="Enter a valid phone number, at least 8 digits.";return}
 if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){m.className="msg err";m.textContent="Enter a valid email address.";return}
-$("sb").disabled=true;
+var rec={name:n,phone:p,email:e,course:sel.value,at:new Date().toISOString()};
+var wait=$("w").value!=="";
+m.textContent="";busy(true);
 try{
-var r=await fetch("/api/register",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:n,phone:p,email:e,course:sel.value,website:$("w").value})});
-if(!r.ok)throw 0;
-m.className="msg ok";m.textContent=(sel.value.indexOf("Waitlist")===0?"You're on the list, ":"You're registered, ")+n.split(" ")[0]+"! We'll be in touch soon. ✨";$("f").reset();$("sb").disabled=false
-}catch(x){m.className="msg err";m.textContent="Sorry, your details could not be sent. Please try again in a moment.";$("sb").disabled=false}
+if(wait){ok()}
+else if(SHEET_URL){await fetch(SHEET_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(rec)});ok()}
+else if(CONTACT_EMAIL){location.href="mailto:"+CONTACT_EMAIL+"?subject="+encodeURIComponent("Registration: "+rec.course)+"&body="+encodeURIComponent("Name: "+n+"\nPhone: "+p+"\nEmail: "+e+"\nInternship: "+rec.course);ok()}
+else{throw new Error("none")}
+}catch(x){m.className="msg err";m.textContent="Sorry, your details could not be sent. Please try again in a moment.";busy(false)}
+function ok(){busy(false);m.className="msg ok";m.textContent=(rec.course.indexOf("Waitlist")===0?"You're on the list, ":"You're registered, ")+n.split(" ")[0]+"! We'll be in touch soon. ✨";$("f").reset()}
 });
 </script>
 </body>
