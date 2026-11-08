@@ -98,10 +98,10 @@ h2{font-size:clamp(34px,5.4vw,62px);font-weight:800}
 .tag.hot{background:var(--c);border-color:var(--c);color:var(--cink)}
 .feature h3{font-size:clamp(30px,3.6vw,42px);font-weight:800}
 .feature .tagline{color:var(--muted);font-size:17px;margin:10px 0 0}
-.weeks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:26px 0 0;list-style:none;padding:0;counter-reset:w}
-.weeks li{counter-increment:w;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;transition:border-color .2s,transform .2s}
+.weeks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:26px 0 0;list-style:none;padding:0}
+.weeks li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;transition:border-color .2s,transform .2s}
 .weeks li:hover{border-color:var(--c);transform:translateY(-2px)}
-.weeks li::before{content:"WEEK " counter(w,decimal-leading-zero);display:block;font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--c);margin-bottom:4px}
+.weeks li::before{content:attr(data-d);display:block;font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--c);margin-bottom:4px}
 .weeks li:last-child{background:var(--cs);border-color:var(--c)}
 .weeks b{display:block;font:700 16px "Bricolage Grotesque",sans-serif;letter-spacing:-.01em}
 .weeks span{display:block;color:var(--muted);font-size:14px;line-height:1.4;margin-top:2px}
@@ -175,10 +175,10 @@ section{padding:72px 0}.form{padding:24px 20px;box-shadow:5px 5px 0 var(--accent
 <div class="hero"><div class="wrap">
 <a class="pill" href="#internships"><b>BATCH 01</b><span class="dot" aria-hidden="true"></span>Cloud &amp; DevOps internships open · ₹499 each</a>
 <h1>Stop watching tutorials. <span class="grad">Start building real infra.</span></h1>
-<p class="lead">8-week, mentor-led Cloud and DevOps internships for students and fresh grads. Real tasks every week, training in AI-assisted cloud and DevOps work with Claude, honest feedback, and a project that proves you can actually do the job. Just ₹499 each.</p>
+<p class="lead">15-day, mentor-led Cloud and DevOps internships for students and fresh grads. Hands-on tasks every day, training in AI-assisted cloud and DevOps work with Claude, honest feedback, and a project that proves you can actually do the job. Just ₹499 each.</p>
 <div class="cta"><a class="btn" href="#register-form">Register for Batch 01 →</a><a class="btn ghost" href="#internships">See the internships</a></div>
 <div class="stickers" aria-hidden="true"><span class="st">☁️ AWS</span><span class="st">📦 Docker</span><span class="st">✨ Claude AI</span><span class="st">☸️ Kubernetes</span><span class="st">🔁 CI/CD</span></div>
-<div class="stats"><div><b>2 tracks</b><span>Cloud &amp; DevOps, open now</span></div><div><b>8 weeks</b><span>Per internship</span></div><div><b>₹499 each</b><span>Per 8-week internship</span></div><div><b>1 mentor</b><span>Reviews your work weekly</span></div></div>
+<div class="stats"><div><b>2 tracks</b><span>Cloud &amp; DevOps, open now</span></div><div><b>15 days</b><span>Per internship</span></div><div><b>₹499 each</b><span>Per 15-day internship</span></div><div><b>1 mentor</b><span>Reviews every task</span></div></div>
 </div></div>
 
 <div class="mq" aria-hidden="true"><div class="marquee"><div class="track">
@@ -189,44 +189,44 @@ section{padding:72px 0}.form{padding:24px 20px;box-shadow:5px 5px 0 var(--accent
 <section id="internships"><div class="wrap">
 <span class="eyebrow">Open now · Batch 01</span>
 <h2>Pick your track: <span class="cl">Cloud</span> or <span class="dv">DevOps</span></h2>
-<p class="sub">Eight weeks, eight real tasks. Each week builds on the last, and by the end you will have a working project you built yourself and can explain in an interview.</p>
+<p class="sub">15 days, eight real tasks. Each one builds on the last, and by the end you will have a working project you built yourself and can explain in an interview.</p>
 <div class="open">
 
 <article class="feature cloud" id="cloud"><div class="feature-in">
-<div class="ftop"><div class="ficon" aria-hidden="true">☁️</div><div class="price"><b>₹499</b><span>full 8 weeks</span></div></div>
-<div class="tags"><span class="tag hot">🔥 Open now</span><span class="tag">8 weeks</span><span class="tag">Mentor-led</span><span class="tag">✨ AI-assisted</span></div>
+<div class="ftop"><div class="ficon" aria-hidden="true">☁️</div><div class="price"><b>₹499</b><span>full 15 days</span></div></div>
+<div class="tags"><span class="tag hot">🔥 Open now</span><span class="tag">15 days</span><span class="tag">Mentor-led</span><span class="tag">✨ AI-assisted</span></div>
 <h3>Cloud Intern (AWS)</h3>
 <p class="tagline">Build and run real infrastructure on AWS, from your first server to a fully deployed, monitored website.</p>
 <div class="ai"><span class="aic" aria-hidden="true">✨</span><div><b>Includes AI-assisted cloud training with Claude</b><span>Learn to work like modern cloud engineers: use Claude to draft IAM policies, explain AWS errors, review your architecture and speed up troubleshooting.</span></div></div>
 <ol class="weeks">
-<li><b>Onboarding</b><span>Safe AWS account, IAM and billing alerts</span></li>
-<li><b>Compute</b><span>Launch and harden EC2 servers</span></li>
-<li><b>Storage</b><span>Host assets on S3 with access controls</span></li>
-<li><b>Networking</b><span>Build a VPC with public and private subnets</span></li>
-<li><b>Databases</b><span>Connect the app to RDS</span></li>
-<li><b>Monitoring</b><span>CloudWatch dashboards and alarms</span></li>
-<li><b>Serverless</b><span>Swap a component for Lambda</span></li>
-<li><b>Final project 🏁</b><span>Deploy and present a live site on AWS</span></li>
+<li data-d="DAY 01"><b>Onboarding</b><span>Safe AWS account, IAM and billing alerts</span></li>
+<li data-d="DAYS 02–03"><b>Compute</b><span>Launch and harden EC2 servers</span></li>
+<li data-d="DAYS 04–05"><b>Storage</b><span>Host assets on S3 with access controls</span></li>
+<li data-d="DAYS 06–07"><b>Networking</b><span>Build a VPC with public and private subnets</span></li>
+<li data-d="DAYS 08–09"><b>Databases</b><span>Connect the app to RDS</span></li>
+<li data-d="DAYS 10–11"><b>Monitoring</b><span>CloudWatch dashboards and alarms</span></li>
+<li data-d="DAYS 12–13"><b>Serverless</b><span>Swap a component for Lambda</span></li>
+<li data-d="DAYS 14–15"><b>Final project 🏁</b><span>Deploy and present a live site on AWS</span></li>
 </ol>
 <div class="get"><h4>What you walk away with</h4><div class="chips"><span>🌐 Live AWS project</span><span>✨ Claude AI skills</span><span>📜 Certificate</span><span>🧠 Mentor feedback</span><span>📁 Portfolio write-up</span></div></div>
 <a class="btn" href="#register-form" data-track="Cloud Internship (AWS)">Register for Cloud →</a>
 </div></article>
 
 <article class="feature devops" id="devops"><div class="feature-in">
-<div class="ftop"><div class="ficon" aria-hidden="true">♾️</div><div class="price"><b>₹499</b><span>full 8 weeks</span></div></div>
-<div class="tags"><span class="tag hot">🔥 Open now</span><span class="tag">8 weeks</span><span class="tag">Mentor-led</span><span class="tag">✨ AI-assisted</span></div>
+<div class="ftop"><div class="ficon" aria-hidden="true">♾️</div><div class="price"><b>₹499</b><span>full 15 days</span></div></div>
+<div class="tags"><span class="tag hot">🔥 Open now</span><span class="tag">15 days</span><span class="tag">Mentor-led</span><span class="tag">✨ AI-assisted</span></div>
 <h3>DevOps Intern</h3>
 <p class="tagline">Automate how software ships, from Git and Docker to a pipeline that deploys to Kubernetes on its own.</p>
 <div class="ai"><span class="aic" aria-hidden="true">✨</span><div><b>Includes AI-assisted DevOps training with Claude</b><span>Learn to work like modern DevOps engineers: use Claude to write Dockerfiles, CI/CD pipelines and Terraform, and to debug failed builds faster.</span></div></div>
 <ol class="weeks">
-<li><b>Onboarding</b><span>Join the team repo and review process</span></li>
-<li><b>Git workflow</b><span>Ship changes through pull requests</span></li>
-<li><b>Containers</b><span>Containerise an app with Docker</span></li>
-<li><b>CI/CD</b><span>Test every change automatically</span></li>
-<li><b>Infra as code</b><span>Provision the environment with Terraform</span></li>
-<li><b>Kubernetes</b><span>Deploy the app to a cluster</span></li>
-<li><b>Monitoring</b><span>Logs, alerts and a simulated incident</span></li>
-<li><b>Final project 🏁</b><span>Commit to live deploy, fully automated</span></li>
+<li data-d="DAY 01"><b>Onboarding</b><span>Join the team repo and review process</span></li>
+<li data-d="DAYS 02–03"><b>Git workflow</b><span>Ship changes through pull requests</span></li>
+<li data-d="DAYS 04–05"><b>Containers</b><span>Containerise an app with Docker</span></li>
+<li data-d="DAYS 06–07"><b>CI/CD</b><span>Test every change automatically</span></li>
+<li data-d="DAYS 08–09"><b>Infra as code</b><span>Provision the environment with Terraform</span></li>
+<li data-d="DAYS 10–11"><b>Kubernetes</b><span>Deploy the app to a cluster</span></li>
+<li data-d="DAYS 12–13"><b>Monitoring</b><span>Logs, alerts and a simulated incident</span></li>
+<li data-d="DAYS 14–15"><b>Final project 🏁</b><span>Commit to live deploy, fully automated</span></li>
 </ol>
 <div class="get"><h4>What you walk away with</h4><div class="chips"><span>🚀 Working CI/CD pipeline</span><span>✨ Claude AI skills</span><span>📜 Certificate</span><span>🧠 Mentor feedback</span><span>📁 GitHub portfolio</span></div></div>
 <a class="btn" href="#register-form" data-track="DevOps Internship">Register for DevOps →</a>
@@ -251,9 +251,9 @@ section{padding:72px 0}.form{padding:24px 20px;box-shadow:5px 5px 0 var(--accent
 <h2>Less lecture. <span class="grad">More doing.</span></h2>
 <p class="sub">You learn by doing real work, with someone experienced checking it.</p>
 <div class="feat">
-<div><span class="em" aria-hidden="true">🧪</span><h3>Real tasks, every week</h3><p>No hour-long videos. Each week you get a task like the ones junior cloud and DevOps engineers get, and you ship it.</p></div>
+<div><span class="em" aria-hidden="true">🧪</span><h3>Real tasks, every day</h3><p>No hour-long videos. Every day or two you get a task like the ones junior cloud and DevOps engineers get, and you ship it.</p></div>
 <div><span class="em" aria-hidden="true">✨</span><h3>AI-assisted, the right way</h3><p>Learn to use Claude the way working engineers do: to move faster, while still understanding every line you ship.</p></div>
-<div><span class="em" aria-hidden="true">💬</span><h3>A real mentor</h3><p>A mentor reviews your work every week, answers your questions and tells you exactly what to level up.</p></div>
+<div><span class="em" aria-hidden="true">💬</span><h3>A real mentor</h3><p>A mentor reviews every task you finish, answers your questions and tells you exactly what to level up.</p></div>
 <div><span class="em" aria-hidden="true">🧾</span><h3>Proof for your CV</h3><p>A working project, an internship certificate and a write-up you can drop straight into your CV and LinkedIn.</p></div>
 </div>
 </div></section>
