@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Register – Techwright 15-Day Online Internship</title>
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0b1120">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Space+Grotesk:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#0b1120;--bg2:#0f172a;--card:#131c31;--ink:#e8edf5;--muted:#94a3b8;--line:#22304a;--accent:#4f7cff;--accent-hi:#6b91ff;--accent-soft:rgba(79,124,255,.13);--cloud:#e8a33d;--cloud-soft:rgba(232,163,61,.13);--live:#34d399;--ok:#34d399;--err:#f87171;--navy:#0b1120;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Space Grotesk",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.02;margin:0;letter-spacing:-.035em}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+:focus-visible{outline:3px solid var(--cloud);outline-offset:3px}
+.grad{background:linear-gradient(90deg,var(--accent-hi),#9db6ff 45%,var(--cloud));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(11,17,32,.8);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:800 24px "Bricolage Grotesque",sans-serif;text-decoration:none;letter-spacing:-.04em}
+.logo i{font-style:normal;color:var(--accent-hi)}
+.back{text-decoration:none;color:var(--muted);font-weight:500;font-size:15px}
+.back:hover{color:var(--ink)}
+
+.page{position:relative;overflow:hidden;padding:64px 0 88px}
+.page::before{content:"";position:absolute;right:-180px;top:-200px;width:720px;height:720px;background:radial-gradient(circle,rgba(79,124,255,.3),transparent 62%);pointer-events:none}
+.page::after{content:"";position:absolute;left:-220px;bottom:-260px;width:640px;height:640px;background:radial-gradient(circle,rgba(232,163,61,.11),transparent 62%);pointer-events:none}
+.page .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:start}
+
+.pill{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);background:rgba(19,28,49,.85);border-radius:999px;padding:7px 16px 7px 8px;font-size:14px;font-weight:500}
+.pill b{background:var(--cloud);color:var(--navy);border-radius:999px;padding:2px 10px;font-size:12px;letter-spacing:.04em;white-space:nowrap}
+.dot{flex:none;width:8px;height:8px;border-radius:50%;background:var(--live);box-shadow:0 0 0 0 rgba(52,211,153,.6);animation:ping 1.8s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 10px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
+.eyebrow{display:block;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--cloud);margin:28px 0 12px}
+h1{font-size:clamp(44px,6.4vw,76px);font-weight:800}
+.lead{font-size:19px;color:var(--muted);margin:20px 0 0;max-width:46ch}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:32px}
+.facts div{background:rgba(19,28,49,.75);border:1px solid var(--line);border-radius:18px;padding:16px 18px;transition:transform .2s,border-color .2s}
+.facts div:hover{transform:translateY(-3px);border-color:#33425f}
+.facts b{display:block;font:800 24px "Bricolage Grotesque",sans-serif;letter-spacing:-.03em}
+.facts span{color:var(--muted);font-size:14px}
+.tracks{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.tk{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;padding:8px 16px;border-radius:999px;border:1.5px solid}
+.tk.cl{border-color:rgba(232,163,61,.5);background:var(--cloud-soft);color:var(--cloud)}
+.tk.dv{border-color:rgba(107,145,255,.5);background:var(--accent-soft);color:var(--accent-hi)}
+.ai{display:flex;gap:14px;align-items:center;margin-top:22px;padding:14px 18px;border-radius:16px;background:var(--accent-soft);border:1.5px dashed rgba(107,145,255,.55)}
+.ai .aic{flex:none;width:38px;height:38px;border-radius:11px;background:var(--accent);display:grid;place-items:center;font-size:18px;transform:rotate(-6deg);box-shadow:3px 3px 0 #000}
+.ai b{display:block;font:700 16px "Bricolage Grotesque",sans-serif}
+.ai span{display:block;color:var(--muted);font-size:14px}
+
+.form{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:32px;box-shadow:8px 8px 0 var(--accent)}
+.form h2{font-size:30px;font-weight:800}
+.form .fsub{color:var(--muted);font-size:15px;margin:6px 0 4px}
+fieldset{border:0;padding:0;margin:22px 0 0}
+legend{font:700 12px "Space Grotesk",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--cloud);padding:0;margin-bottom:2px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+label{display:block;font-weight:700;margin:14px 0 7px;font-size:14px}
+label .opt{font-weight:400;color:var(--muted)}
+label .req{color:var(--cloud)}
+input,select{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;height:52px}
+input:focus,select:focus{border-color:var(--accent);outline:none}
+input[aria-invalid="true"],select[aria-invalid="true"]{border-color:var(--err)}
+select option{background:var(--bg2)}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+.choice label{margin:0;cursor:pointer;display:flex;align-items:center;gap:12px;padding:14px;border:1.5px solid var(--line);border-radius:14px;background:var(--bg);font-size:15px;transition:border-color .15s,background .15s}
+.choice input{position:absolute;opacity:0;width:1px;height:1px}
+.choice .ic{flex:none;width:38px;height:38px;border-radius:11px;display:grid;place-items:center;font-size:19px;border:2px solid;transform:rotate(-6deg)}
+.choice .c1 .ic{border-color:var(--cloud);background:var(--cloud-soft)}
+.choice .c2 .ic{border-color:var(--accent);background:var(--accent-soft)}
+.choice small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+.choice .c1:has(input:checked){border-color:var(--cloud);background:var(--cloud-soft)}
+.choice .c2:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
+.choice label:has(input:focus-visible){outline:3px solid var(--cloud);outline-offset:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:26px;background:var(--accent);color:#fff;font:700 17px "Space Grotesk",sans-serif;border:0;border-radius:999px;padding:17px 30px;cursor:pointer;box-shadow:4px 4px 0 var(--cloud);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--cloud)}
+.btn:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--cloud)}
+.btn:disabled{opacity:.85;cursor:wait;transform:none}
+.btn.loading::before{content:"";width:16px;height:16px;border:2.5px solid currentColor;border-right-color:transparent;border-radius:50%;animation:sp .7s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.note{color:var(--muted);font-size:14px;margin:14px 0 0}
+.msg{margin-top:14px;font-weight:700}
+.msg.err{color:var(--err)}
+.done{text-align:center;padding:20px 4px}
+.done .big{width:72px;height:72px;margin:0 auto 18px;border-radius:20px;background:var(--live);color:var(--navy);display:grid;place-items:center;font:800 36px "Bricolage Grotesque",sans-serif;transform:rotate(-6deg);box-shadow:5px 5px 0 #000}
+.done h2{font-size:34px}
+.done p{color:var(--muted);margin:10px auto 0;max-width:36ch}
+.done a{display:inline-block;margin-top:22px;color:var(--accent-hi);font-weight:700}
+footer{border-top:1px solid var(--line);color:var(--muted);padding:30px 0;font-size:15px}
+
+@media (max-width:900px){.page .wrap{grid-template-columns:1fr;gap:40px}.page{padding-top:44px}}
+@media (max-width:560px){.row,.choice{grid-template-columns:1fr}.form{padding:24px 20px;box-shadow:5px 5px 0 var(--accent)}}
+@media (prefers-reduced-motion:reduce){.dot{animation:none}.btn.loading::before{animation-duration:2.5s}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="index.html">tech<i>wright</i></a><a class="back" href="index.html">← Back to website</a></div></header>
+<main class="page"><div class="wrap">
+
+<div>
+<span class="pill"><b>BATCH 01</b><span class="dot" aria-hidden="true"></span>Registrations open</span>
+<span class="eyebrow">Project-based · Live online</span>
+<h1>15-Day Online <span class="grad">Internship</span></h1>
+<p class="lead">Build real cloud and DevOps projects with a mentor in live evening sessions, and finish with a project and a certificate.</p>
+<div class="tracks"><span class="tk cl">☁️ Cloud (AWS)</span><span class="tk dv">♾️ DevOps</span></div>
+<div class="facts">
+<div><b>15 days</b><span>Project-based</span></div>
+<div><b>Live online</b><span>Mentor-led sessions</span></div>
+<div><b>7–8 PM IST</b><span>Evening sessions</span></div>
+<div><b>Certificate</b><span>On completion</span></div>
+</div>
+<div class="ai"><span class="aic" aria-hidden="true">✨</span><div><b>Includes AI-assisted training with Claude</b><span>Learn to work faster the way modern engineers do</span></div></div>
+</div>
+
+<div class="form" id="card">
+<form id="f" novalidate>
+<h2>Register now</h2>
+<p class="fsub">Fill in your details and we will contact you with the next steps.</p>
+
+<fieldset><legend>Internship</legend>
+<div class="choice" role="radiogroup" aria-label="Internship">
+<label class="c1"><input type="radio" name="track" value="Cloud Internship (AWS)" checked><span class="ic" aria-hidden="true">☁️</span><span>Cloud (AWS)<small>Live AWS project</small></span></label>
+<label class="c2"><input type="radio" name="track" value="DevOps Internship"><span class="ic" aria-hidden="true">♾️</span><span>DevOps<small>Working CI/CD pipeline</small></span></label>
+</div></fieldset>
+
+<fieldset><legend>Your details</legend>
+<label for="n">Name <span class="req">*</span></label><input id="n" autocomplete="name" required placeholder="Your full name">
+<div class="row">
+<div><label for="e">Email <span class="req">*</span></label><input id="e" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+<div><label for="p">Mobile number <span class="req">*</span></label><input id="p" type="tel" autocomplete="tel" inputmode="tel" required placeholder="+91 98765 43210"></div>
+</div>
+</fieldset>
+
+<fieldset><legend>Education</legend>
+<div class="row">
+<div><label for="dg">Degree and branch <span class="req">*</span></label><input id="dg" required placeholder="e.g. B.E. CSE"></div>
+<div><label for="yr">Year of passing <span class="opt">(optional)</span></label><select id="yr"><option value="">Select year</option></select></div>
+</div>
+<label for="cn">College name <span class="opt">(optional)</span></label><input id="cn" autocomplete="organization" placeholder="Your college">
+<label for="ca">College address <span class="opt">(optional)</span></label><input id="ca" placeholder="City, state">
+</fieldset>
+
+<div style="position:absolute;left:-9999px" aria-hidden="true"><label for="w">Website</label><input id="w" tabindex="-1" autocomplete="off"></div>
+<button class="btn" type="submit" id="sb">Register now 🚀</button>
+<p class="note">We use these details only to contact you about your registration.</p>
+<div class="msg" id="m" role="status"></div>
+</form>
+</div>
+
+</div></main>
+<footer><div class="wrap">© Techwright. Cloud and DevOps internships.</div></footer>
+<script>
+var SHEET_URL="https://script.google.com/macros/s/AKfycbxZEzX8qOF4YGZeC8jBLbvbKmd46sfUKNg1vNozoNTkl61vS-AHQXLRMPSuejk5x5RIkg/exec";
+var $=function(i){return document.getElementById(i)};
+(function(){var y=new Date().getFullYear(),s=$("yr");for(var i=y-6;i<=y+5;i++){var o=document.createElement("option");o.value=o.textContent=i;s.appendChild(o)}})();
+(function(){var t=(new URLSearchParams(location.search).get("track")||"").toLowerCase();if(t==="devops")document.querySelector('input[value="DevOps Internship"]').checked=true})();
+var LBL=$("sb").textContent;
+function busy(on){var b=$("sb");b.disabled=on;b.classList.toggle("loading",on);b.textContent=on?"Registering…":LBL;$("f").setAttribute("aria-busy",String(on));$("f").querySelectorAll("input,select").forEach(function(i){i.disabled=on})}
+function bad(id,text){var m=$("m");m.className="msg err";m.textContent=text;var el=$(id);el.setAttribute("aria-invalid","true");el.focus();return false}
+$("f").addEventListener("input",function(ev){ev.target.removeAttribute("aria-invalid")});
+$("f").addEventListener("submit",async function(ev){
+ev.preventDefault();var m=$("m");m.className="msg";m.textContent="";
+var v=function(id){return $(id).value.trim()};
+var n=v("n"),e=v("e"),p=v("p"),dg=v("dg");
+if(n.length<2)return bad("n","Enter your name.");
+if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e))return bad("e","Enter a valid email address.");
+if(p.replace(/\D/g,"").length<8)return bad("p","Enter a valid mobile number, at least 8 digits.");
+if(dg.length<2)return bad("dg","Enter your degree and branch.");
+var rec={name:n,email:e,phone:p,course:document.querySelector('input[name="track"]:checked').value,degree:dg,year:v("yr"),college:v("cn"),address:v("ca"),at:new Date().toISOString()};
+busy(true);
+try{
+if($("w").value===""){await fetch(SHEET_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(rec)})}
+var card=$("card");card.textContent="";
+var d=document.createElement("div");d.className="done";d.setAttribute("role","status");d.tabIndex=-1;
+var big=document.createElement("div");big.className="big";big.setAttribute("aria-hidden","true");big.textContent="✓";
+var h=document.createElement("h2");h.textContent="You're registered, "+n.split(" ")[0]+"!";
+var t=document.createElement("p");t.textContent="Thanks for registering for the "+rec.course+". We'll contact you on "+e+" with the next steps.";
+var a=document.createElement("a");a.href="index.html";a.textContent="← Back to website";
+d.append(big,h,t,a);card.appendChild(d);d.focus();card.scrollIntoView({behavior:"smooth",block:"start"});
+}catch(x){busy(false);m.className="msg err";m.textContent="Sorry, your details could not be sent. Please try again in a moment."}
+});
+</script>
+</body>
+</html>

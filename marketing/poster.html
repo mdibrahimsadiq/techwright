@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Techwright – 15-Day Online Internship poster</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Space+Grotesk:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#0b1120;--bg2:#0f172a;--card:#131c31;--ink:#e8edf5;--muted:#94a3b8;--line:#22304a;--accent:#4f7cff;--accent-hi:#6b91ff;--accent-soft:rgba(79,124,255,.14);--cloud:#e8a33d;--cloud-hi:#f0b555;--cloud-soft:rgba(232,163,61,.14);--live:#34d399;--navy:#0b1120}
+*{box-sizing:border-box;margin:0}
+html,body{background:#05080f}
+body{display:grid;place-items:center;min-height:100vh;font-family:"Space Grotesk",system-ui,sans-serif;color:var(--ink)}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.035em;line-height:.98}
+.poster{position:relative;width:1080px;height:1350px;overflow:hidden;background:var(--bg);padding:56px 68px 56px;display:flex;flex-direction:column}
+.poster::before{content:"";position:absolute;right:-220px;top:-240px;width:860px;height:860px;background:radial-gradient(circle,rgba(79,124,255,.38),transparent 62%)}
+.poster::after{content:"";position:absolute;left:-260px;bottom:-300px;width:820px;height:820px;background:radial-gradient(circle,rgba(232,163,61,.16),transparent 62%)}
+.poster>*{position:relative;z-index:1}
+.grid-bg{position:absolute;inset:0;z-index:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(180deg,#000 0%,transparent 70%)}
+.top{display:flex;justify-content:space-between;align-items:center}
+.logo{font:800 44px "Bricolage Grotesque",sans-serif;letter-spacing:-.04em}
+.logo i{font-style:normal;color:var(--accent-hi)}
+.pill{display:inline-flex;align-items:center;gap:12px;border:1.5px solid var(--line);background:rgba(19,28,49,.9);border-radius:999px;padding:9px 22px 9px 10px;font-size:22px;font-weight:500}
+.pill b{background:var(--cloud);color:var(--navy);border-radius:999px;padding:4px 14px;font-size:18px;letter-spacing:.05em}
+.dot{width:12px;height:12px;border-radius:50%;background:var(--live);box-shadow:0 0 0 6px rgba(52,211,153,.18)}
+.eyebrow{margin-top:40px;font-weight:700;font-size:24px;letter-spacing:.18em;text-transform:uppercase;color:var(--cloud)}
+h1{font-size:112px;font-weight:800;margin-top:14px}
+.grad{background:linear-gradient(90deg,var(--accent-hi),#9db6ff 45%,var(--cloud));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:29px;color:var(--muted);margin-top:18px;max-width:30ch;line-height:1.4}
+.stickers{position:absolute;right:64px;top:220px;width:300px;height:330px}
+.st{position:absolute;font:700 24px "Space Grotesk",sans-serif;padding:12px 20px;border-radius:16px;color:var(--navy);border:3px solid var(--navy);box-shadow:5px 5px 0 #000;white-space:nowrap}
+.st:nth-child(1){top:0;right:10px;background:var(--cloud);transform:rotate(7deg)}
+.st:nth-child(2){top:100px;left:0;background:var(--accent);color:#fff;transform:rotate(-6deg)}
+.st:nth-child(3){top:200px;right:0;background:#fff;transform:rotate(5deg)}
+.tracks{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:36px}
+.tr{--c:var(--cloud);--cs:var(--cloud-soft);--cink:var(--navy);border-radius:28px;padding:3px;background:linear-gradient(135deg,var(--c),#33425f 80%)}
+.tr.dv{--c:var(--accent);--cs:var(--accent-soft);--cink:#fff}
+.tr>div{background:var(--bg2);border-radius:25px;padding:24px 26px 26px;height:100%}
+.trh{display:flex;align-items:center;gap:18px}
+.ic{width:70px;height:70px;border-radius:18px;background:var(--cs);border:3px solid var(--c);display:grid;place-items:center;font-size:36px;transform:rotate(-6deg);box-shadow:4px 4px 0 var(--c);flex:none}
+.tr h3{font-size:44px;font-weight:800}
+.tr p{color:var(--muted);font-size:22px;margin-top:4px}
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.tools span{font-size:20px;font-weight:500;padding:7px 14px;border-radius:12px;background:var(--card);border:1.5px solid var(--line)}
+.tools span:first-child{background:var(--c);border-color:var(--c);color:var(--cink);font-weight:700}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}
+.facts div{background:rgba(19,28,49,.9);border:1.5px solid var(--line);border-radius:22px;padding:16px 22px}
+.facts b{display:block;font:800 38px "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;line-height:1.05}
+.facts span{display:block;color:var(--muted);font-size:19px;margin-top:6px}
+.facts .price b{color:var(--cloud)}
+.ai{display:flex;align-items:center;gap:18px;margin-top:18px;padding:18px 24px;border-radius:22px;border:2px dashed rgba(107,145,255,.55);background:var(--accent-soft)}
+.ai .aic{width:52px;height:52px;border-radius:14px;background:var(--accent);display:grid;place-items:center;font-size:26px;transform:rotate(-6deg);box-shadow:3px 3px 0 #000;flex:none}
+.ai b{font:700 27px "Bricolage Grotesque",sans-serif;letter-spacing:-.01em}
+.ai span{display:block;color:var(--muted);font-size:20px;margin-top:2px}
+.bottom{margin-top:auto;padding-top:22px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.gets{display:flex;flex-wrap:wrap;gap:10px}
+.gets span{font-size:21px;font-weight:500;padding:8px 16px;border-radius:999px;border:1.5px solid #33425f}
+.cta{display:inline-flex;align-items:center;gap:12px;background:var(--accent);color:#fff;font:700 34px "Space Grotesk",sans-serif;border-radius:999px;padding:24px 44px;box-shadow:7px 7px 0 var(--cloud);white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="poster" id="poster">
+<div class="grid-bg"></div>
+<div class="top"><div class="logo">tech<i>wright</i></div><div class="pill"><b>BATCH 01</b><span class="dot"></span>Registrations open</div></div>
+
+<div class="eyebrow">Project-based · Live online</div>
+<h1>15-Day<br>Online<br><span class="grad">Internship</span></h1>
+<p class="lead">Build real cloud and DevOps projects with a mentor, live every evening.</p>
+<div class="stickers"><span class="st">☁️ AWS</span><span class="st">📦 Docker</span><span class="st">✨ Claude AI</span></div>
+
+<div class="tracks">
+<div class="tr"><div><div class="trh"><div class="ic">☁️</div><div><h3>Cloud</h3><p>AWS internship</p></div></div>
+<div class="tools"><span>Live AWS project</span><span>EC2</span><span>S3</span><span>VPC</span><span>RDS</span><span>Lambda</span></div></div></div>
+<div class="tr dv"><div><div class="trh"><div class="ic">♾️</div><div><h3>DevOps</h3><p>CI/CD internship</p></div></div>
+<div class="tools"><span>Working pipeline</span><span>Git</span><span>Docker</span><span>Terraform</span><span>Kubernetes</span></div></div></div>
+</div>
+
+<div class="facts">
+<div><b>15 days</b><span>Project-based</span></div>
+<div><b>Live</b><span>Online sessions</span></div>
+<div><b>7–8 PM</b><span>IST, every day</span></div>
+<div class="price"><b>₹499</b><span>Per internship</span></div>
+</div>
+
+<div class="ai"><span class="aic">✨</span><div><b>Includes AI-assisted cloud &amp; DevOps training with Claude</b><span>Learn to work faster the way modern engineers do</span></div></div>
+
+<div class="bottom">
+<div class="gets"><span>📜 Certificate</span><span>💬 Mentor feedback</span></div>
+<div class="cta">Register now →</div>
+</div>
+</div>
+</body>
+</html>
