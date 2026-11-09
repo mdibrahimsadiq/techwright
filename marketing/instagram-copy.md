@@ -35,6 +35,40 @@ That's where "link in bio" in the captions points.
 
 ---
 
+## Poster: launch announcement
+
+Image: `poster.png`
+
+```
+🚀 Registrations are OPEN for Techwright Batch 01!
+
+Stop watching tutorials. Start building real projects. Our 15-day live online internship lets you work on real Cloud and DevOps tasks, with a mentor reviewing every one.
+
+Pick your track ⬇️
+☁️ Cloud (AWS): go from your first server to a live, secured website on AWS
+♾️ DevOps: build a pipeline that tests and deploys an app to Kubernetes automatically
+
+What you get ✅
+✨ AI-assisted cloud & DevOps training with Claude
+💬 Mentor feedback on every task
+📁 A real project for your portfolio
+📜 Certificate on completion
+
+💻 Live online · 15 days · project-based
+💰 Just ₹499 per internship
+
+Open to students and fresh grads. No prior work experience needed.
+
+➡️ Register now: link in bio
+🔗 yourwebsite.com
+
+Tag a friend who should join you 🔖
+
+#internship #onlineinternship #internship2026 #cloudcomputing #aws #devops #docker #kubernetes #techinternship #engineeringstudents #freshers #studentsofindia #claudeai #techwright
+```
+
+---
+
 ## Post 1: Cloud Internship (AWS)
 
 Image: `instagram-post-cloud.png`
